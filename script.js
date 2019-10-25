@@ -4,13 +4,19 @@ $(document).ready(function() {
     var queryUrl =
       'http://api.openweathermap.org/data/2.5/weather?q=' +
       city +
-      '&APPID=' +
+      '&units=imperial&APPID=' +
       apiKey;
     $.ajax({
       url: queryUrl,
       method: 'GET'
     }).then(function(response) {
       console.log(response);
+      $('#cityName').text(response.name);
+      $('#temp').text(`Temperature: ` + response.main.temp);
+      $('#humidity').text(`Humidity: ` + response.main.humidity);
+      $('#windSpeed').text(`Wind Speed: ` + response.wind.speed);
+      $('#uvIndex').text(`UV Index; `);
+      console.log(response.name);
     });
   }
 
