@@ -1,0 +1,18 @@
+.fiveDayCard {
+}
+.fiveDayCardCol {
+  display: flex;
+  justify-content: space-evenly;
+}
+.grayBg {
+  background-color: lightgray;
+}
+.header {
+  background-color: rgb(56, 56, 56);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.margin10 {
+  margin: 10px;
+}

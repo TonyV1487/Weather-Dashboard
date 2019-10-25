@@ -5,6 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <!-- Adding jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <!-- Adding bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Adding local CSS file -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Adding JS file -->
+    <script type="text/javascript" src="./script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container-fluid">
+      <div class="header row">
+        <h1 class="margin10">Weather Dashboard</h1>
+      </div>
+      <div class="content row">
+        <div class="col-3 grayBg">
+          <h4>Search for a City:</h4>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="City name"
+              aria-label="City name"
+              aria-describedby="button-addon2"
+              id="citySearch"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button" id="button-addon2">
+                Search
+              </button>
+            </div>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item">Austin</li>
+            <li class="list-group-item">Chicago</li>
+            <li class="list-group-item">New York</li>
+            <li class="list-group-item">Orlando</li>
+            <li class="list-group-item">San Francisco</li>
+            <li class="list-group-item">Seattle</li>
+            <li class="list-group-item">Denver</li>
+            <li class="list-group-item">Atlanta</li>
+          </ul>
+        </div>
+        <div class="col-9">
+          <div class="card margin10">
+            <h2 class="margin10">City Name</h2>
+            <div class="margin10">Temperature:</div>
+            <div class="margin10">Humidity:</div>
+            <div class="margin10">Wind Speed:</div>
+            <div class="margin10">UV Index:</div>
+          </div>
+          <h4 class="margin10">5-Day Forecast:</h4>
+          <div class="row margin10">
+            <div class="col-12 fiveDayCardCol">
+              <div class="bg-primary card fiveDayCard text-white">
+                <div class="card-body">
+                  <h5 class="card-title 1DayTitle">Card title</h5>
+                  <p class="cart-text 1DaySymbol">Symbol</p>
+                  <p class="card-text 1DayTemp">
+                    Temp
+                  </p>
+                  <p class="card-text 1DayHumidity">
+                    Humidity
+                  </p>
+                </div>
+              </div>
+              <div class="bg-primary card fiveDayCard text-white">
+                <div class="card-body">
+                  <h5 class="card-title 2DayTitle">Card title</h5>
+                  <p class="cart-text 2DaySymbol">Symbol</p>
+                  <p class="card-text 2DayTemp">
+                    Temp
+                  </p>
+                  <p class="card-text 2DayHumidity">
+                    Humidity
+                  </p>
+                </div>
+              </div>
+              <div class="bg-primary card fiveDayCard text-white">
+                <div class="card-body">
+                  <h5 class="card-title 3DayTitle">Card title</h5>
+                  <p class="cart-text 3DaySymbol">Symbol</p>
+                  <p class="card-text 3DayTemp">
+                    Temp
+                  </p>
+                  <p class="card-text 3DayHumidity">
+                    Humidity
+                  </p>
+                </div>
+              </div>
+              <div class="bg-primary card fiveDayCard text-white">
+                <div class="card-body">
+                  <h5 class="card-title 4DayTitle">Card title</h5>
+                  <p class="cart-text 4DaySymbol">Symbol</p>
+                  <p class="card-text 4DayTemp">
+                    Temp
+                  </p>
+                  <p class="card-text 4DayHumidity">
+                    Humidity
+                  </p>
+                </div>
+              </div>
+              <div class="bg-primary card fiveDayCard text-white">
+                <div class="card-body">
+                  <h5 class="card-title 5DayTitle">Card title</h5>
+                  <p class="cart-text 5DaySymbol">Symbol</p>
+                  <p class="card-text 5DayTemp">
+                    Temp
+                  </p>
+                  <p class="card-text 5DayHumidity">
+                    Humidity
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
