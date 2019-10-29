@@ -50,14 +50,14 @@
             </div>
           </div>
           <ul class="list-group">
-            <li class="list-group-item">Austin</li>
-            <li class="list-group-item">Chicago</li>
-            <li class="list-group-item">New York</li>
-            <li class="list-group-item">Orlando</li>
-            <li class="list-group-item">San Francisco</li>
-            <li class="list-group-item">Seattle</li>
-            <li class="list-group-item">Denver</li>
-            <li class="list-group-item">Atlanta</li>
+            <li class="list-group-item js-cityList">Austin</li>
+            <li class="list-group-item js-cityList">Chicago</li>
+            <li class="list-group-item js-cityList">New York</li>
+            <li class="list-group-item js-cityList">Orlando</li>
+            <li class="list-group-item js-cityList">San Francisco</li>
+            <li class="list-group-item js-cityList">Seattle</li>
+            <li class="list-group-item js-cityList">Denver</li>
+            <li class="list-group-item js-cityList">Atlanta</li>
           </ul>
         </div>
         <div class="col-9">
@@ -66,7 +66,9 @@
             <div class="margin10" id="temp">Temperature:</div>
             <div class="margin10" id="humidity">Humidity:</div>
             <div class="margin10" id="windSpeed">Wind Speed:</div>
-            <div class="margin10" id="uvIndex">UV Index:</div>
+            <div class="margin10">
+              UV Index:<span class="badge badge-danger" id="uvIndex"></span>
+            </div>
           </div>
           <h4 class="margin10">5-Day Forecast:</h4>
           <div class="row margin10">
