@@ -10,13 +10,20 @@ $(document).ready(function() {
       url: queryUrl,
       method: 'GET'
     }).then(function(response) {
-      $('#cityName').text(response.name);
+      console.log(response);
+      var todaysDate = moment().format('MM/DD/YY');
+      var iconId = response.weather[0].icon;
+      $('#cityName').text(response.name + ' ' + todaysDate);
+      $('#wicon').attr(
+        'src',
+        'http://openweathermap.org/img/wn/' + iconId + '.png'
+      );
       $('#temp').text(`Temperature: ` + response.main.temp + ' °F');
       $('#humidity').text(`Humidity: ` + response.main.humidity + '%');
       $('#windSpeed').text(`Wind Speed: ` + response.wind.speed + ' MPH');
+
       // Create UV index URL query
       // Pull coordinates from the returned OBJ and pass coordinates into UV index API call
-
       var queryUrlUV =
         'http://api.openweathermap.org/data/2.5/uvi?appid=' +
         apiKey +
@@ -63,7 +70,7 @@ $(document).ready(function() {
         // Split the Month, Year, and Date into their own strings
         var splitMYD = splitDateTime[0].split('-');
         // Combine the strings into MM-DD-YYYY format
-        var dateActual = splitMYD[1] + '-' + splitMYD[2] + '-' + splitMYD[0];
+        var dateActual = splitMYD[1] + '/' + splitMYD[2] + '/' + splitMYD[0];
 
         // Pull temp from API
         var temp = response.list[i].main.temp;
