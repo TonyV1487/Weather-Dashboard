@@ -57,9 +57,9 @@ $(document).ready(function() {
     }).then(function(response) {
       console.log(response.list);
       // index = response.list;
-      for (i = 5; i < 40; i += 8) {
+      for (i = 3; i < 40; i += 8) {
         // Convert i to the current date
-        day = (i - 5) / 8;
+        day = (i - 3) / 8;
 
         console.log(response.list[i].dt_txt);
 
