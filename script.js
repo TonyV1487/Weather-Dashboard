@@ -2,7 +2,7 @@ $(document).ready(function() {
   apiKey = 'a35408144a5c190a5dad6b16befef222';
   function currentWeather(city) {
     var queryUrl =
-      'http://api.openweathermap.org/data/2.5/weather?q=' +
+      'https://api.openweathermap.org/data/2.5/weather?q=' +
       city +
       '&units=imperial&APPID=' +
       apiKey;
@@ -16,7 +16,7 @@ $(document).ready(function() {
       $('#cityName').text(response.name + ' ' + todaysDate);
       $('#wicon').attr(
         'src',
-        'http://openweathermap.org/img/wn/' + iconId + '.png'
+        'https://openweathermap.org/img/wn/' + iconId + '.png'
       );
       $('#temp').text(`Temperature: ` + response.main.temp + ' °F');
       $('#humidity').text(`Humidity: ` + response.main.humidity + '%');
@@ -25,7 +25,7 @@ $(document).ready(function() {
       // Create UV index URL query
       // Pull coordinates from the returned OBJ and pass coordinates into UV index API call
       var queryUrlUV =
-        'http://api.openweathermap.org/data/2.5/uvi?appid=' +
+        'https://api.openweathermap.org/data/2.5/uvi?appid=' +
         apiKey +
         '&lat=' +
         response.coord.lat +
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
   function fiveDayForecast(city) {
     var queryUrl5day =
-      'http://api.openweathermap.org/data/2.5/forecast?q=' +
+      'https://api.openweathermap.org/data/2.5/forecast?q=' +
       city +
       '&units=imperial&appid=' +
       apiKey;
