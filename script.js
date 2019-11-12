@@ -1,5 +1,6 @@
 $(document).ready(function() {
   apiKey = 'a35408144a5c190a5dad6b16befef222';
+  // Set current weather
   function currentWeather(city) {
     var queryUrl =
       'https://api.openweathermap.org/data/2.5/weather?q=' +
@@ -78,9 +79,16 @@ $(document).ready(function() {
         // Pull humidity from API
         var humidity = response.list[i].main.humidity;
 
+        // Pull icon ID
+        var iconId = response.list[i].weather[0].icon;
+        console.log(iconId);
+
         // Apply text to page
         $('#' + day + 'DayTitle').text(dateActual);
-        $('#' + day + 'DaySymbol').text('Test');
+        $('#' + day + 'DaySymbol').attr(
+          'src',
+          'https://openweathermap.org/img/wn/' + iconId + '.png'
+        );
         $('#' + day + 'DayTemp').text('Temp: ' + temp + 'ºF');
         $('#' + day + 'DayHumidity').text('Humidity: ' + humidity + '%');
       }
