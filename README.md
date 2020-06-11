@@ -6,3 +6,6 @@ A website that allows the user to select from a series of preselected major citi
 
 ## Post Selection
 ![Post Selection](https://github.com/TonyV1487/Weather-Dashboard/blob/master/WeatherDashboard_completed.png)
+
+## Technologies
+HTML, CSS, Javascript, JQuery, Bootstrap, Moment.js, OpenWeatherMap API, 
